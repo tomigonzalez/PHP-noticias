@@ -1,21 +1,4 @@
-<?php
-  session_start();
-
-  require 'database.php';
-
-  if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT user_id, email, password FROM users WHERE user_id = :id');
-    $records->bindParam(':id', $_SESSION['user_id']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-
-    $user = null;
-
-    if (count($results) > 0) {
-      $user = $results;
-    }
-  }
-?>
+<?php session_start();?>
 
 <!DOCTYPE html>
 <html>
@@ -28,14 +11,12 @@
   <body>
     <?php require '../partials/header.php' ?>
 
-    <?php if(!empty($user)): ?>
-      <br> Welcome. <?= $user['email']; ?>
-      <br>You are Successfully Logged In
-      <a href="logout.php">
-        Logout
-      </a>
-    <?php else: ?>
-      
-    <?php endif; ?>
+   
+    <?php require '../noticias/noticias.php'?>
+    <footer>
+      <div class="footerdiv">
+        <a href="https://portafoliov3-tan.vercel.app/" target="_blank">TMGC</a><p>© Todos los derechos reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>

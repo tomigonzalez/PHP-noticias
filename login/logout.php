@@ -5,5 +5,6 @@
 
   session_destroy();
 
-  header('Location: /phpAregntina/php_login/login');
+  header('Location: /phpAregntina/php_login/login/login.php');
+
 ?>

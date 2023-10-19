@@ -1,9 +1,9 @@
 <?php
 
-  session_start();
+session_start();
 
   if (isset($_SESSION['user_id'])) {
-    header('Location: /phpAregntina/php_login/login');
+    header('Location: /phpAregntina/php_login/login/login.php');
   }
   require 'database.php';
 
@@ -17,7 +17,7 @@
 
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['user_id'] = $results['user_id'];
-      header("Location: /phpAregntina/php_login/login");
+      header("Location: /phpAregntina/php_login/login/account.php");
     } else {
       $message = 'Sorry, those credentials do not match';
     }
