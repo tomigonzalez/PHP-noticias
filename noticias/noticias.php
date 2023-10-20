@@ -54,8 +54,11 @@ $noticias = $query->fetchAll(PDO::FETCH_ASSOC);
     echo  '</div>';
     echo '</div>';
     echo '<div class="position">';
-    echo '<a href="/phpAregntina/php_login/noticias/noticias_admin.php?noticia_id=' . $noticia['id'] . '" class="botonesadmin tag-blue">Editar</a>';
-    echo '<a href="#" class="eliminar-noticia botonesadmin tag-blue" data-noticia-id="' . $noticia['id'] . '">Eliminar</a>';
+    echo '<a href="/phpAregntina/php_login/noticias/noticias_admin.php?noticia_id=' . $noticia['id'] . '" class="botonesadmin tag-blue">Edit</a>';
+    echo '<a href="#" class="eliminar-noticia botonesadmin tag-blue" data-noticia-id="' . $noticia['id'] . '">Delete</a>';
+    echo '</div>';
+    echo '<div class="position">';
+    echo '<a class="botonesadmin tag-blue" href="/phpAregntina/php_login/noticias/verNoticia.php?id=' . $noticia['id'] . '">View more</a>';
     echo '</div>';
     echo '</div>';
 

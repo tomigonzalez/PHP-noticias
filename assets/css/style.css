@@ -245,7 +245,30 @@ footer {
 .botonesadmin:hover {
   color: #5a5858;
 }
-
+.infonoticia {
+  height: 100vh;
+}
+.continfonoticia {
+  height: 100%;
+}
 header a:hover {
   color: #00b8eb;
+}
+.noticiastyle {
+  flex-flow: COLUMN;
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+
+.cuerpostyle {
+  align-items: CENTER;
+  flex-flow: COLUMN;
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+.cuerpostyle p {
+  width: 80%;
+  overflow-wrap: anywhere;
 }
